@@ -1,1 +1,2 @@
-# stix-imager-simulator
+# STIX_simulator
+python simulator
