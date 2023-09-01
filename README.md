@@ -1,7 +1,7 @@
 # STIX imager simulator 
 STIX imager simulator
 
-# Image classification and reconstruction using machine learning
+## Image classification and reconstruction using machine learning
 
 * See the conference talk:  https://meetingorganizer.copernicus.org/EGU22/EGU22-6371.html
 
