@@ -1,4 +1,4 @@
-# STIX_simulator
+# STIX imager simulator 
 STIX imager simulator
 
 # Image classification and reconstruction using machine learning
