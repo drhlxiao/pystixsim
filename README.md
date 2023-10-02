@@ -9,7 +9,7 @@ and the illuminated area on each pixel is determined using boolean operations wi
 <a href="https://docs.google.com/presentation/d/12wVX86CBa87V-FSFBKRonBJIQk50MO23WgO1X3Y6ZDI/edit?usp=sharing">How it works </a>
 
 
-Please contact me (hualin.xiao(at)fhnw.ch) if you are interested in using it. 
+Please contact me (hualin.xiao(at)fhnw.ch) if you would like to use it. 
 
 
 The simulator has been used for the following work:
