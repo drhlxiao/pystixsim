@@ -7,10 +7,13 @@ When simulating a point source at a particular location, the polygons are projec
 allowing for the determination of the illuminated area on each pixel using boolean operations with the projected polygons.
 
 For non-point X-ray sources, patterns can be synthesized  by weighting the  patterns of  point sources at different locations. 
-
+## How it works
 <a href="https://docs.google.com/presentation/d/12wVX86CBa87V-FSFBKRonBJIQk50MO23WgO1X3Y6ZDI/edit?usp=sharing">How it works </a>
 
+## Examples:
 
+https://github.com/drhlxiao/pystixsim/blob/main/examples/STIX_pattern_simulator.ipynb
+## Contact
 Please contact me (hualin.xiao(at)fhnw.ch) if you would like to use it. 
 
 
