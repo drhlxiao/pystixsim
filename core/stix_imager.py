@@ -27,6 +27,7 @@ class StixNormalImager(object):
     def __init__(self, det_idx):
         self.det_idx = det_idx
 
+        print(f'Grid parameter type:{StixGrid.parameter_type}')
         self.detector = StixDetector
         self.det_pixel_polygons = self.detector.get_pixel_polygons()
         self.pixel_vertices = self.detector.get_pixel_vertices()

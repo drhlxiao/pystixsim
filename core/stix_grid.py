@@ -1,3 +1,4 @@
+
 import math
 import numpy as np
 import sys
@@ -6,26 +7,17 @@ sys.path.append('.')
 import matplotlib.pyplot as plt
 from matplotlib.path import Path
 import matplotlib.patches as patches
-
 from core import grid_parameters as sgp
 
 
-def deg2rad(x):
-    return x * math.pi / 180
-
-
-def arcsec2rad(x):
-    return deg2rad(x / 3600.)
-
-
-def plot_polygons(points, ax, fc='none', ec='black', alpha=1, lw=1):
-    if isinstance(points, np.ndarray):
-        points = points.tolist()
-    if not points:
+def plot_polygons(point_coords, ax, fc='none', ec='black', alpha=1, lw=1):
+    if isinstance(point_coords, np.ndarray):
+        point_coords = point_coords.tolist()
+    if not point_coords:
         return
     codes = [Path.MOVETO
-             ] + [Path.LINETO] * (len(points) - 2) + [Path.CLOSEPOLY]
-    path = Path(points, codes)
+             ] + [Path.LINETO] * (len(point_coords) - 2) + [Path.CLOSEPOLY]
+    path = Path(point_coords, codes)
     patch = patches.PathPatch(path, fc=fc, ec=ec, alpha=alpha, lw=lw)
     ax.add_patch(patch)
 
@@ -176,8 +168,8 @@ class StixGrid(object):
         self.config_grid(det_id, which_grid, user_phase, user_rot_deg)
         stix_x, stix_y = sun_y, sun_x #rotated by 90 deg
         z = sgp.grid_z.get(which_grid, 0)
-        dx = -z * math.tan(arcsec2rad(stix_x))
-        dy = -z * math.tan(arcsec2rad(stix_y))
+        dx = -z * math.tan(np.deg2rad(stix_x/3600.))
+        dy = -z * math.tan(np.deg2rad(stix_y/3600))
         #offset on detector 
         frame_vtx= np.array(sgp.frame_vertices[self.which_grid])
         frame_x_minmax=(np.min(frame_vtx[:,0]),  np.max(frame_vtx[:,0]))
@@ -251,9 +243,10 @@ class StixGrid(object):
         new_vertices = []
 
         stix_x, stix_y = sun_y_arcsec, sun_x_arcsec
+
         z = sgp.grid_z.get(self.which_grid, 0)
-        dx = -z * math.tan(arcsec2rad(stix_x))
-        dy = -z * math.tan(arcsec2rad(stix_y))
+        dx = -z * math.tan(np.deg2rad(stix_x/3600.))
+        dy = -z * math.tan(np.deg2rad(stix_y/3600.))
 
         for strip in self.strip_polygons:
             strip_pnts = []
