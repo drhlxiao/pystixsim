@@ -112,10 +112,10 @@ class _StixDetector(object):
             self.pixel_vertices[i] = shift_polygon(p0_coord, dw*i,0)
             
 
-            self.pixel_vertices[i + 4] =shift_polygon(p8_coord, dw*i,0)
+            self.pixel_vertices[i + 4] =shift_polygon(p5_coord, dw*i,0)
           
       
-            self.pixel_vertices[i + 8] = shift_polygon(p5_coord, dw*i,0)
+            self.pixel_vertices[i + 8] = shift_polygon(p8_coord, dw*i,0)
         self.pixel_polygons = [
             Polygon(self.pixel_vertices[i]) for i in range(12)
         ]

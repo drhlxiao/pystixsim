@@ -242,7 +242,8 @@ class StixGrid(object):
 
         new_vertices = []
 
-        stix_x, stix_y = sun_y_arcsec, sun_x_arcsec
+        #stix_x, stix_y = sun_y_arcsec, sun_x_arcsec
+        stix_x, stix_y = - sun_x_arcsec, sun_y_arcsec
 
         z = sgp.grid_z.get(self.which_grid, 0)
         dx = -z * math.tan(np.deg2rad(stix_x/3600.))

@@ -1341,8 +1341,9 @@ cfl_hole_coords = {
     'right_bottom': [(9.9, -10.0), (9.9, -3.45), (11.0, -3.45), (11.0, -10.0)]
 }
 
-r_front_detector = 550 + 47  #measured from CAD
-r_rear_detector = 47
+r_rear_detector = 47.78
+#measured in the CAD file
+r_front_detector = 545.30 + r_rear_detector
 frame_vertices = {
     'front': [(-11, -10), (-11, 10), (11, 10), (11, -10), (-11, -10)],
     'rear': [(-6.5, -6.5), (-6.5, 6.5), (6.5, 6.5), (6.5, -6.5), (-6.5, -6.5)]

@@ -12,7 +12,7 @@ from core import stix_cfl
 
 from core import grid_parameters as sgp
 
-TOP_BIG_PIXEL_PATTERN_ONLY=True
+TOP_BIG_PIXEL_PATTERN_ONLY=False
 #set to true if only calculate pattern for big pixels
 
 
@@ -236,10 +236,10 @@ class StixNormalImager(object):
 
             if ax2:
                 ax2.plot(range(12), pattern)
-                ax2.set_ylabel('Open area (mm2)')
-                ax2.set_xlabel('Pixel')
-                ax2.set_title('Open area')
-                print(f'Open area percentage {self.open_ratio*100:.1f}%')
+                ax2.set_ylabel('Illuminated area (mm2)')
+                ax2.set_xlabel('Pixel ID')
+                ax2.set_title('Illuminated area')
+                print(f'Illuminated area percentage {self.open_ratio*100:.1f}%')
 
             if ax3:
                 x = [0, 1, 2, 3]
@@ -251,16 +251,17 @@ class StixNormalImager(object):
                 )
                 ax3.plot(x, pattern[4:8], label='big bottom')
                 ax3.plot(x, 10 * np.array(pattern[8:12]), label='small x 10')
-                ax3.set_ylabel('Open area (mm2)')
-                ax3.set_xlabel('Pixel')
+                ax3.set_ylabel('Illuminated area (mm2)')
+                ax3.set_xlabel('Pixel ID')
                 ax3.legend()
             if ax4:
 
                 unsym = [pattern[i + 4] - pattern[i] for i in range(4)]
                 ax4.plot(x, unsym)
-                ax4.set_title('Pattern difference between top and bottom')
-                ax4.set_xlabel('Pixel')
-                ax4.set_ylabel('Open area diff. (mm2)')
+                ax4.set_title(' bottom - top')
+                ax4.set_xlabel('Pixel ID')
+                ax4.set_ylabel('Area diff. (mm2)')
+            #print("Pattern:", pattern)
             plt.tight_layout()
         return fig, (ax, ax2, ax3, ax4)
 
