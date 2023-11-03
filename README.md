@@ -1,4 +1,4 @@
-# STIX imager software simulator - stixsim
+# STIX imager software simulator - pystixsim
 The Spectrometer Telescope for Imaging X-rays (STIX) on Solar Orbiter is a hard X-ray imaging spectrometer covering the energy range from 4 to 150 keV. STIX observes hard X-ray bremsstrahlung emissions from solar flares and therefore provides diagnostics of the hottest ('10 MK) flare plasma while quantifying the location, spectrum, and energy content of flare-accelerated nonthermal electrons.
 
 pystixsim is a simulator written in Python for the STIX imager that can simulate observed count patterns  for sources of different shapes. 
