@@ -22,3 +22,6 @@ The simulator has been used for the following work:
 * Image classification and reconstruction using machine learning <br>
   See the conference talk:  https://meetingorganizer.copernicus.org/EGU22/EGU22-6371.html <br>
   https://docs.google.com/presentation/d/1pHYuUKThdrTX-ZZFeHY_D0FCeF0csCIa4DpE0NtzkIU/edit?usp=sharing
+
+* https://docs.google.com/presentation/d/16zWLs8cxUZdWyrgQD1FjuyoMptZYDzfGzjJaMdy24KQ/edit?usp=sharing
+  
