@@ -11,7 +11,7 @@ from shapely.geometry import Polygon
 
 #http://localhost:8890/notebooks/flare_coarse_locator_skylut_generator_for_web.ipynb#
 
-from pystixsim import grid_parameters as sgp
+from pystixsim import config as sgp
 
 
 class CFL(object):

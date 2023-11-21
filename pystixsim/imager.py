@@ -10,7 +10,7 @@ from pystixsim.detector import StixDetector
 from pystixsim.grid import StixGrid
 from pystixsim import cfl
 
-from pystixsim import grid_parameters as sgp
+from pystixsim import config as sgp
 
 TOP_BIG_PIXEL_PATTERN_ONLY=False
 #set to true if only calculate pattern for big pixels

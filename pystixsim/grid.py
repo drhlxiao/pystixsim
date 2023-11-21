@@ -7,7 +7,7 @@ sys.path.append('.')
 import matplotlib.pyplot as plt
 from matplotlib.path import Path
 import matplotlib.patches as patches
-from pystixsim import grid_parameters as sgp
+from pystixsim import config as sgp
 
 
 def plot_polygons(point_coords, ax, fc='none', ec='black', alpha=1, lw=1):
@@ -38,8 +38,8 @@ class StixGrid(object):
     }
     debug = False
 
-    grid_parameters = {'nominal': sgp.nominal, 'real': sgp.real}
-    grid_data = grid_parameters['nominal']
+    config = {'nominal': sgp.nominal, 'real': sgp.real}
+    grid_data = config['nominal']
     parameter_type = 'nominal'  # can be real
 
     @classmethod
@@ -47,7 +47,7 @@ class StixGrid(object):
         if pt not in ['nominal', 'real']:
             print('The type can only be "nominal" or "real"!')
             return
-        cls.grid_data = cls.grid_parameters[pt]
+        cls.grid_data = cls.config[pt]
         cls.parameter_type = pt
 
     def __init__(self):
