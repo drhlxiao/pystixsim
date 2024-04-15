@@ -17,6 +17,10 @@ https://github.com/drhlxiao/pystixsim/blob/main/examples/STIX_pattern_simulator.
 ## Contact
 Please contact me (hualin.xiao(at)fhnw.ch) if you would like to use it. 
 
+## Citing this work
+
+Xiao, H. (2024). pystixsim: an imaging simulator for the X-ray Imager/Telescope onboard Solar Orbiter STIX (v1.0). Zenodo. https://doi.org/10.5281/zenodo.10973277
+
 
 The simulator has been used for the following work:
 * Image classification and reconstruction using machine learning <br>
